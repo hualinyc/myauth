@@ -25,12 +25,30 @@ SECRET_KEY = 'd=$2de^x0rii0mr-a*4^_ow2!1$4g3-s-27eqj5r6_bgjvic%x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'www.pythonanywhere.com',]
 
 LOGIN_REDIRECT_URL = '/'
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '544482902923-akboujsnenbaf4oqg9etrnc2qtr3r5ko.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'FBTDFybUEgESgkeRMcMjQjjD'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [
+    'profile',
+    'email',
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://sites.google.com/feeds/'
+]
+
+
+SOCIAL_AUTH_SALESFORCE_OAUTH2_KEY = '3MVG9uudbyLbNPZNd3OTCmr8OO1pZI0gBBW4xHBG23W7AsaovYrtvBGhe4H4DLXPZg6zkeo8hf3od8lTbr7vI'
+SOCIAL_AUTH_SALESFORCE_OAUTH2_SECRET = '7320613887701277234'
+SOCIAL_AUTH_SALESFORCE_OAUTH2_SCOPE = [
+    'profile',
+    'email',
+    'api',
+    'full'
+]
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -122,6 +140,7 @@ AUTHENTICATION_BACKENDS = (
    'social.backends.google.GoogleOAuth2',
    'social.backends.twitter.TwitterOAuth',
    'django.contrib.auth.backends.ModelBackend',
+   'social.backends.salesforce.SalesforceOAuth2',
 )
 
 

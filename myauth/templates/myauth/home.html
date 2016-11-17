@@ -23,6 +23,9 @@
      <li>
        <a href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}">Login with Twitter</a>
      </li>
+     <li>
+       <a href="{% url 'social:begin' 'salesforce-oauth2' %}?next={{ request.path }}">Login with SalesForce</a>
+     </li>
    {% endif %}
    </ul>
  </p>
