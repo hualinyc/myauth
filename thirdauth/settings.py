@@ -25,7 +25,7 @@ SECRET_KEY = 'd=$2de^x0rii0mr-a*4^_ow2!1$4g3-s-27eqj5r6_bgjvic%x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'www.pythonanywhere.com',]
+ALLOWED_HOSTS = ['localhost', 'hualinyc.pythonanywhere.com',]
 
 LOGIN_REDIRECT_URL = '/'
 
